@@ -14,8 +14,8 @@ import (
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
 
-	"../application"
-	"../datatypes"
+	application "github.com/ralph-nijpels/geography-application"
+	datatypes "github.com/ralph-nijpels/geography-datatypes"
 )
 
 // Countries implements the datamodel for countries
@@ -62,7 +62,7 @@ func (countries *Countries) GetByCountryCode(countryCode string) (*Country, erro
 		bson.D{{Key: "iso-country-code", Value: countryCode}}).Decode(&result)
 
 	if err != nil {
-		return nil, fmt.Errorf("Not found")
+		return nil, fmt.Errorf("not found")
 	}
 
 	return &result, nil
@@ -96,7 +96,7 @@ func (countries *Countries) GetList(fromCountryCode string, untilCountryCode str
 
 	cur, err := countries.collection.Find(countries.context.DBContext, query, findOptions)
 	if err != nil {
-		return nil, fmt.Errorf("Not found")
+		return nil, fmt.Errorf("not found")
 	}
 
 	for cur.Next(countries.context.DBContext) {
@@ -108,11 +108,11 @@ func (countries *Countries) GetList(fromCountryCode string, untilCountryCode str
 	cur.Close(countries.context.DBContext)
 
 	if int64(len(result)) > countries.context.MaxResults {
-		return nil, fmt.Errorf("Too many results")
+		return nil, fmt.Errorf("too many results")
 	}
 
 	if len(result) == 0 {
-		return nil, fmt.Errorf("Not found")
+		return nil, fmt.Errorf("not found")
 	}
 
 	return result, nil
@@ -170,7 +170,7 @@ func (countries *Countries) importCSVLine(line []string, lineNumber int) error {
 		options.Update().SetUpsert(true))
 
 	if err != nil {
-		return fmt.Errorf("Countries[%d]: %v", lineNumber, err)
+		return fmt.Errorf("countries[%d]: %v", lineNumber, err)
 	}
 
 	return nil
@@ -198,7 +198,7 @@ func (countries *Countries) ImportCSV() error {
 
 	// Skip the headerline
 	reader := csv.NewReader(bufio.NewReader(csvFile))
-	line, err := reader.Read()
+	_, err = reader.Read()
 	if err != nil {
 		return err
 	}
@@ -206,7 +206,7 @@ func (countries *Countries) ImportCSV() error {
 	// Read the data
 	// LineNumbers start at 1 and we've done the header (hence 2)
 	lineNumber := 2
-	line, err = reader.Read()
+	line, err := reader.Read()
 	for err == nil {
 		err = countries.importCSVLine(line, lineNumber)
 		countries.context.LogError(err)

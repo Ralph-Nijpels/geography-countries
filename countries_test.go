@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"testing"
 
-	"../application"
+	application "github.com/ralph-nijpels/geography-application"
 )
 
 func TestGetList(t *testing.T) {

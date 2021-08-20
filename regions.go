@@ -11,8 +11,8 @@ import (
 
 	"go.mongodb.org/mongo-driver/bson"
 
-	"../application"
-	"../datatypes"
+	application "github.com/ralph-nijpels/geography-application"
+	datatypes "github.com/ralph-nijpels/geography-datatypes"
 )
 
 // regions implements the regions data
@@ -102,7 +102,7 @@ func (regions *Regions) importCSVLine(line []string, lineNumber int) error {
 		bson.M{"$set": country})
 
 	if err != nil {
-		return fmt.Errorf("Regions[%d]: %v", lineNumber, err)
+		return fmt.Errorf("regions[%d]: %v", lineNumber, err)
 	}
 
 	return nil
@@ -131,7 +131,7 @@ func (regions *Regions) ImportCSV() error {
 
 	// Skip the headerline
 	reader := csv.NewReader(bufio.NewReader(csvFile))
-	line, err := reader.Read()
+	_, err = reader.Read()
 	if err != nil {
 		return err
 	}
@@ -139,7 +139,7 @@ func (regions *Regions) ImportCSV() error {
 	// Read the data
 	// line Numbers start at 1 and we've done the header, hence 2
 	lineNumber := 2
-	line, err = reader.Read()
+	line, err := reader.Read()
 	for err == nil {
 		err = regions.importCSVLine(line, lineNumber)
 		regions.context.LogError(err)
