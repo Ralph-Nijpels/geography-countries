@@ -67,6 +67,8 @@ github.com/ralph-nijpels/geography-application v0.0.0-20210820083514-d45cd5ace59
 github.com/ralph-nijpels/geography-application v0.0.0-20210820083514-d45cd5ace59a/go.mod h1:X8W+aE3WzM/sFkz/5pe9+tDewd4Ui2biMXK22JcMmw0=
 github.com/ralph-nijpels/geography-application v0.0.0-20210827122408-2919a7a3e6a5 h1:rttZ5BYnjwMj1HC44J7IA5BmmT9uQviuXL9Qb2z+Fp0=
 github.com/ralph-nijpels/geography-application v0.0.0-20210827122408-2919a7a3e6a5/go.mod h1:X8W+aE3WzM/sFkz/5pe9+tDewd4Ui2biMXK22JcMmw0=
+github.com/ralph-nijpels/geography-application v0.0.0-20210827124444-c56f56a2fd0b h1:zmsyQR8CNqePU+ndfzZR5muE5OjhbYnAlYet6outkHA=
+github.com/ralph-nijpels/geography-application v0.0.0-20210827124444-c56f56a2fd0b/go.mod h1:X8W+aE3WzM/sFkz/5pe9+tDewd4Ui2biMXK22JcMmw0=
 github.com/ralph-nijpels/geography-datatypes v0.0.0-20210820081517-0ee82f225b42 h1:z9OAmbxygL+LeskyRqetGR0A6rMBCV3ISWFdDm1zWog=
 github.com/ralph-nijpels/geography-datatypes v0.0.0-20210820081517-0ee82f225b42/go.mod h1:HaPipSSNJedSxVRPRS0sv1F9HyQPhpjATnRd8caCyJ4=
 github.com/rogpeppe/go-internal v1.1.0/go.mod h1:M8bDsm7K2OlrFYOpmOWEs/qY81heoFRclV5y23lUDJ4=
