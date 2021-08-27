@@ -7,6 +7,8 @@ import (
 	application "github.com/ralph-nijpels/geography-application"
 )
 
+// TestGetList checks if finding a list of countries will work.
+// pre-condition: the database has been filled!
 func TestGetList(t *testing.T) {
 	fmt.Println("Testing GetList..")
 
@@ -20,10 +22,11 @@ func TestGetList(t *testing.T) {
 		{"US", "", true},
 		{"NL", "NL", true}}
 
-	context, err := application.GetContext()
+	context, err := application.CreateAppContext()
 	if err != nil {
 		t.Errorf("Internal error: [%v]", err)
 	}
+	defer context.Destroy()
 
 	countries := NewCountries(context)
 
@@ -38,6 +41,8 @@ func TestGetList(t *testing.T) {
 	}
 }
 
+// TestGetByCountryCode checks if finding a specific country will work.
+// pre-condition: the database has been filled!
 func TestGetByCountryCode(t *testing.T) {
 	fmt.Println("Testing GetByCountryCode..")
 
@@ -50,10 +55,11 @@ func TestGetByCountryCode(t *testing.T) {
 		{"XX", false},
 	}
 
-	context, err := application.GetContext()
+	context, err := application.CreateAppContext()
 	if err != nil {
 		t.Errorf("Internal error: [%v]", err)
 	}
+	defer context.Destroy()
 
 	countries := NewCountries(context)
 

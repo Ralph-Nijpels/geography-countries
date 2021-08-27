@@ -19,7 +19,7 @@ import (
 
 // Regions represents the connection to the database
 type Regions struct {
-	context *application.Context
+	context *application.AppContext
 	parent  *Countries
 }
 

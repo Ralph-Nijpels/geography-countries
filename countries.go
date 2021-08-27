@@ -22,7 +22,7 @@ import (
 
 // Countries is the representation of the Countries Collection in the database
 type Countries struct {
-	context    *application.Context
+	context    *application.AppContext
 	collection *mongo.Collection
 }
 
@@ -38,7 +38,7 @@ type Country struct {
 }
 
 // NewCountries instantiates the connection to the database collection
-func NewCountries(application *application.Context) *Countries {
+func NewCountries(application *application.AppContext) *Countries {
 	countries := Countries{context: application}
 
 	// Country Collection
