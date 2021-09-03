@@ -69,8 +69,14 @@ github.com/ralph-nijpels/geography-application v0.0.0-20210827122408-2919a7a3e6a
 github.com/ralph-nijpels/geography-application v0.0.0-20210827122408-2919a7a3e6a5/go.mod h1:X8W+aE3WzM/sFkz/5pe9+tDewd4Ui2biMXK22JcMmw0=
 github.com/ralph-nijpels/geography-application v0.0.0-20210827124444-c56f56a2fd0b h1:zmsyQR8CNqePU+ndfzZR5muE5OjhbYnAlYet6outkHA=
 github.com/ralph-nijpels/geography-application v0.0.0-20210827124444-c56f56a2fd0b/go.mod h1:X8W+aE3WzM/sFkz/5pe9+tDewd4Ui2biMXK22JcMmw0=
+github.com/ralph-nijpels/geography-application v1.0.0 h1:jxFd0gKOpWDj2A55ShoBUstc23Mu8M8YPoLJPCae8GE=
+github.com/ralph-nijpels/geography-application v1.0.0/go.mod h1:X8W+aE3WzM/sFkz/5pe9+tDewd4Ui2biMXK22JcMmw0=
 github.com/ralph-nijpels/geography-datatypes v0.0.0-20210820081517-0ee82f225b42 h1:z9OAmbxygL+LeskyRqetGR0A6rMBCV3ISWFdDm1zWog=
 github.com/ralph-nijpels/geography-datatypes v0.0.0-20210820081517-0ee82f225b42/go.mod h1:HaPipSSNJedSxVRPRS0sv1F9HyQPhpjATnRd8caCyJ4=
+github.com/ralph-nijpels/geography-datatypes v1.0.0 h1:I/nzgAS9p84jhFmBcPzIF73ebO322765jBaaEwl9wtM=
+github.com/ralph-nijpels/geography-datatypes v1.0.0/go.mod h1:Bh7WShD5tYV5mLswZ/E24msosv+SpQHPWdsRE1owBrc=
+github.com/ralph-nijpels/geography-datatypes v1.0.1 h1:MctfjqIM0+YOw/b2uCkEuJt2dh8kI79/4W73VZDvWmg=
+github.com/ralph-nijpels/geography-datatypes v1.0.1/go.mod h1:Bh7WShD5tYV5mLswZ/E24msosv+SpQHPWdsRE1owBrc=
 github.com/rogpeppe/go-internal v1.1.0/go.mod h1:M8bDsm7K2OlrFYOpmOWEs/qY81heoFRclV5y23lUDJ4=
 github.com/rogpeppe/go-internal v1.2.2/go.mod h1:M8bDsm7K2OlrFYOpmOWEs/qY81heoFRclV5y23lUDJ4=
 github.com/rogpeppe/go-internal v1.3.0/go.mod h1:M8bDsm7K2OlrFYOpmOWEs/qY81heoFRclV5y23lUDJ4=
@@ -101,6 +107,8 @@ github.com/youmark/pkcs8 v0.0.0-20181117223130-1be2e3e5546d h1:splanxYIlg+5LfHAM
 github.com/youmark/pkcs8 v0.0.0-20181117223130-1be2e3e5546d/go.mod h1:rHwXgn7JulP+udvsHwJoVG1YGAP6VLg4y9I5dyZdqmA=
 go.mongodb.org/mongo-driver v1.7.1 h1:jwqTeEM3x6L9xDXrCxN0Hbg7vdGfPBOTIkr0+/LYZDA=
 go.mongodb.org/mongo-driver v1.7.1/go.mod h1:Q4oFMbo1+MSNqICAdYMlC/zSTrwCogR4R8NzkI+yfU8=
+go.mongodb.org/mongo-driver v1.7.2 h1:pFttQyIiJUHEn50YfZgC9ECjITMT44oiN36uArf/OFg=
+go.mongodb.org/mongo-driver v1.7.2/go.mod h1:Q4oFMbo1+MSNqICAdYMlC/zSTrwCogR4R8NzkI+yfU8=
 golang.org/x/crypto v0.0.0-20180904163835-0709b304e793/go.mod h1:6SG95UA2DQfeDnfUPMdvaQW0Q7yPrPDi9nlGo2tz2b4=
 golang.org/x/crypto v0.0.0-20190308221718-c2843e01d9a2/go.mod h1:djNgcEr1/C05ACkg1iLfiJU5Ep61QUkGW8qpdssI0+w=
 golang.org/x/crypto v0.0.0-20190422162423-af44ce270edf/go.mod h1:WFFai1msRO1wXaEeE5yQxYXgSfI8pQAWXbQop6sCtWE=
