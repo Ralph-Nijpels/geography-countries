@@ -150,7 +150,7 @@ func (regions *Regions) ImportCSV() error {
 	if err != io.EOF {
 		return err
 	}
-
+	
 	regions.context.LogPrintln("End Import")
 	return nil
 }

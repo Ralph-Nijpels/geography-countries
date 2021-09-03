@@ -40,7 +40,7 @@ type Country struct {
 // NewCountries instantiates the connection to the database collection
 func NewCountries(application *application.AppContext) *Countries {
 	countries := Countries{context: application}
-
+	
 	// Country Collection
 	countries.collection = application.DBClient.Database("flight-schedule").Collection("countries")
 	countryIndex := mongo.IndexModel{Keys: bson.M{"iso-country-code": 1}}
